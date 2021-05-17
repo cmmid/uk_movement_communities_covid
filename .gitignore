@@ -1,5 +1,9 @@
 # data directory
 /data
 
+# output directory
+/output
+
+
 # Misc
 .DS_Store
