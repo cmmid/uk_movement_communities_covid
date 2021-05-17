@@ -1,0 +1,5 @@
+# data directory
+/data
+
+# Misc
+.DS_Store
