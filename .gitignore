@@ -4,6 +4,9 @@
 # output directory
 /output
 
+# R Project file
+uk_movement_communities_covid.Rproj
 
 # Misc
 .DS_Store
+.Rproj.user
