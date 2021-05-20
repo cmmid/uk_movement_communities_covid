@@ -9,9 +9,6 @@ Preprint Manuscript:
 
 #### Overview
 
-
-- describe files later
-
 .
 ├── .gitignore            
 ├── LICENSE
