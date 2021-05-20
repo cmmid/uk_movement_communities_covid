@@ -9,6 +9,7 @@ Preprint Manuscript:
 
 #### Overview
 
+```
 .
 ├── .gitignore            
 ├── LICENSE
@@ -29,7 +30,7 @@ Preprint Manuscript:
     ├── network                 # Directory of network structure analysis code
     ├── communities             # Directory of communities analysis code
     └── communities_local       # Directory of local intervention communities analysis code
-
+```
 
 - folder structure
 - naming convention
