@@ -262,6 +262,16 @@ post_g <- igraph::graph_from_data_frame(
     st_drop_geometry() %>% as_tibble()
 )
 
+pre_joureys <- pre_network$journey %>% unique()
+post_journeys <- post_network$journey %>% unique()
+
+setdiff(pre_joureys, post_journeys)
+
+post_network %>% 
+  filter(journey %in% setdiff(post_journeys, pre_joureys)) %>% 
+  mutate(distance = as.numeric(units::set_units(st_length(geometry), "km"))) %>% pull(distance) %>% max
+
+
 average.path.length(pre_g)
 average.path.length(post_g)
 

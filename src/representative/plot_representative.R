@@ -45,8 +45,10 @@ p_tot <- mob %>%
   ylab('Average Movements') + 
   theme_classic() + 
   theme(plot.margin = unit(c(0,1.2,0,0), "cm"),
+        axis.title.y = element_text(margin = margin(t = 0, r = 0.5, b = 0, l = 0, unit = 'cm')),
         text = element_text(size = 12),
-        axis.title.x = element_blank())
+        axis.title.x = element_blank()) + 
+  ggtitle('a')
 
 p_tot
 
@@ -79,7 +81,7 @@ p_dens <- p_dens_data %>%
         legend.title = element_blank(),
         plot.margin = unit(c(0,0,0,0), "cm"),
         text = element_text(size = 12),
-        axis.title.y = element_text(margin = margin(0, 0.4, 0, 0, 'cm'))) + 
+        axis.title.y = element_text(margin = margin(0, 1.2, 0, 0, 'cm'))) + 
   ggtitle('b')
 
 p_dens
@@ -119,22 +121,17 @@ p_map <- tiles %>%
         axis.ticks = element_blank(),
         axis.text = element_blank(),
         plot.margin = unit(c(0,0,0,0), "cm"),
-        text = element_text(size = 10)) + 
+        text = element_text(size = 12)) + 
   ggtitle('d')
 
 p_map
 
-#this needs another panel
-title <- cowplot::ggdraw() +
-  cowplot::draw_label("a", x = 0, hjust = 0) + theme(plot.margin = margin(0, 0, 7, 55))
 
 g <- cowplot::plot_grid(p_dens, p_pt, ncol = 1)
 
 p <- cowplot::plot_grid(g, p_map, rel_widths = c(0.4, 0.6))
 
 p <- cowplot::plot_grid(p_tot, p, rel_heights = c(0.2, 0.8), nrow = 2)
-
-p <- cowplot::plot_grid(title, p, rel_heights = c(0.05, 1), nrow = 2)
 
 ggutils::ggsave_png_pdf(p,
                         tail(.args, 1),

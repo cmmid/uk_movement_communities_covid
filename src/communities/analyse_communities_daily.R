@@ -177,20 +177,3 @@ p <- cowplot::plot_grid(p_ttwa, p_las, p_comm, nrow = 1)
 
 ggutils::ggsave_png_pdf(p, here("output/figs/las_ttwa_comm.png"),
                         10, 5)
-
-im %>% filter(date == min(date)) %>% pull(cluster) %>% unique() %>% length
-las %>% pull(1) %>% length()
-ttwas %>% pull(1) %>% length()
-
-msoa <- st_read("/Users/hamishgibbs/Documents/Covid-19/archive/uk_demographic_mobility/data/raw/msoa_centroids/Middle_Layer_Super_Output_Areas__December_2011__Population_Weighted_Centroids.shp")
-
-msoa %>% 
-  mutate(country = stringr::str_sub(msoa11cd, 1, 1)) %>% 
-  filter(country == "E")
-
-tile_area %>% 
-  left_join(im %>% filter(date == min(date))) %>% 
-  drop_na(cluster) %>% 
-  group_by(cluster) %>% 
-  summarise(area = sum(area, na.rm = T)) %>% 
-  pull(area) %>% mean()
