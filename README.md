@@ -11,13 +11,13 @@ Repository of code supporting the publication: "Detecting behavioural changes in
 ├── LICENSE
 ├── README.md
 ├── data                        # Directory of all publication data (untracked)
-│   ├── raw                     # Directory of raw, unaltered data
-│       ├── geo                 # Directory of raw, unaltered geospatial data
-│       ├── age_data            # Directory of raw, unaltered age data
-│       ├── census              # Directory of raw, unaltered census population data
-│       ├── census_lookups      # Directory of raw, unaltered lookups between statistical areas
-│       ├── ethnicity_data      # Directory of raw, unaltered ethnicity data
-│       └── imd_data            # Directory of raw, imd data
+│   ├── raw                     # Directory of unaltered data
+│       ├── geo                 # Directory of unaltered geospatial data
+│       ├── age_data            # Directory of unaltered age data
+│       ├── census              # Directory of unaltered census population data
+│       ├── census_lookups      # Directory of unaltered lookups between statistical areas
+│       ├── ethnicity_data      # Directory of unaltered ethnicity data
+│       └── imd_data            # Directory of unaltered imd data
 │   └── processed               # Directory of processed data
 │       ├── census              # Directory of processed census population data
 │       ├── geo                 # Directory of processed geospatial data
