@@ -5,6 +5,7 @@ Repository of code supporting the publication: "Detecting behavioural changes in
 
 #### Overview
 
+```
 .
 ├── .gitignore            
 ├── LICENSE
@@ -31,3 +32,4 @@ Repository of code supporting the publication: "Detecting behavioural changes in
     ├── network                 # Directory of network structure analysis code
     ├── communities             # Directory of communities analysis code
     └── local_interventions     # Directory of local intervention communities analysis code
+```
